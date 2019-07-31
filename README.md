@@ -17,7 +17,7 @@ The tech stack and the [Dockerfile](Dockerfile) used to build it is included. Th
 
 This requires a running Code Ready Workspaces install in OpenShift.
 
-Update the [ansible hosts file](roles/stack-hosts) with your SSO/Keycloak admin credentials and URL
+Update the [ansible hosts file](playbook/roles/stack-hosts) with your SSO/Keycloak admin credentials and URL
 ```
 cr_host_url="https://codeready-workspaces.apps.cluster.rht-labs.com"
 cr_sso_url="https://keycloak-workspaces.apps.cluster.rht-labs.com/auth/realms/codeready/protocol/openid-connect/token"
