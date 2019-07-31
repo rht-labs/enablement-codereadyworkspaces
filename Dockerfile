@@ -1,7 +1,7 @@
 # Using ubi7 base image for mongod can update to stacks-node-rhel8 when mongod available
 FROM registry.redhat.io/codeready-workspaces/stacks-node
 
-ARG MAVEN_VERSION=3.6.0
+ARG MAVEN_VERSION=3.6.1
 ARG MAVEN_URL=https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
 
 USER root
