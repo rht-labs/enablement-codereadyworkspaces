@@ -35,5 +35,5 @@ ansible-playbook -i stack-hosts stack.yml
 Browse to the Code Ready Workspace factory URL link provided after running the ansible playbook to launch your workspace in OpenShift
 
 ```
-  "href": "https://codeready-do500-workspaces.apps.boston-bcf4.gpte.rht-labs.com/f?name=DO500%20Template&user=admin"
+  "href": "https://codeready-workspaces.apps.cluster.rht-labs.com/f?name=DO500%20Template&user=admin"
 ```
