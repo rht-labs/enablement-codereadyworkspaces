@@ -30,7 +30,10 @@ Run the playbook
 ansible-playbook -i stack-hosts stack.yml
 ```
 
-## Use the factory
+## Use the factory to create a workspace
 
-Use the Code Ready Workspace factory link provided after running the playbook to launch your workspace in OpenShift
+Browse to the Code Ready Workspace factory URL link provided after running the ansible playbook to launch your workspace in OpenShift
 
+```
+  "href": "https://codeready-do500-workspaces.apps.boston-bcf4.gpte.rht-labs.com/f?name=DO500%20Template&user=admin"
+```
