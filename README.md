@@ -25,7 +25,7 @@ Unpack the .tar.gz file:
 > tar -xzf codeready-workspaces-1.2.1.GA-operator-installer.tar.gz
 ```
 
-Check the `README.adoc` for more details - including the Prerequisites section. In our case, we are using an OpenShift Container Platform v3.11 with valid Let's Encrypt Certificates enabled. CodeReady Workspaces were deployed with the following command (which uses a custom project name, enables oauth with OCP and ensure it's tls enabled for secure connections):
+Check the local `README.adoc` in the unpacked directory for more details - including the **Prerequisites** section. In our case, we are using an OpenShift Container Platform v3.11 with valid Let's Encrypt Certificates enabled. CodeReady Workspaces were deployed with the following command (which uses a custom project name, enables oauth with OCP and ensure it's tls enabled for secure connections):
 
 ```
 > ./deploy.sh -d -p=do500-workspaces -o -s --public-certs
