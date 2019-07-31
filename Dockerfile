@@ -24,7 +24,6 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 
 # Common shell things
 RUN echo "source scl_source enable rh-python36" >> /etc/bashrc
-RUN echo "source scl_source enable rh-python36" >> /etc/zshrc
 RUN echo "git config --global http.sslVerify false" >> /etc/bashrc
 RUN echo "git config --global http.sslVerify false" >> /etc/zshrc
 
