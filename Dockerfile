@@ -8,9 +8,10 @@ USER root
 
 # Mongod in container for local testing
 COPY mongodb-org-3.6.repo /etc/yum.repos.d/
+COPY google-chrome.repo /etc/yum.repos.d/
 
 # Install
-RUN yum install -y rh-python36.x86_64 compat-openssl10 mongodb-org-server mongodb-org-tools mongodb-org-shell git curl gcc-c++ automake python2 python36 wget psmisc && \    
+RUN yum install -y rh-python36.x86_64 libXScrnSaver xdg-utils google-chrome-stable compat-openssl10 mongodb-org-server mongodb-org-tools mongodb-org-shell git curl gcc-c++ automake python2 python36 wget psmisc && \    
     /opt/rh/rh-python36/root/usr/bin/pip3 install ansible && \
     mkdir -p /usr/share/maven && \
     curl -fsSL ${MAVEN_URL} | tar -xzC /usr/share/maven --strip-components=1 && \
@@ -21,10 +22,11 @@ RUN yum install -y rh-python36.x86_64 compat-openssl10 mongodb-org-server mongod
 RUN echo "source scl_source enable rh-python36" >> /etc/bashrc
 RUN echo "git config --global http.sslVerify false" >> /etc/bashrc
 
-# Maven vars
-ENV MAVEN_HOME /projects
-ENV MAVEN_CONFIG ${MAVEN_HOME}/.m2
-ENV MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+# ENV vars for stu
+ENV MAVEN_HOME /projects \ 
+    MAVEN_CONFIG ${MAVEN_HOME}/.m2 \
+    MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1" \
+    CHROME_BIN=/bin/google-chrome
 
 # Install jq
 # http://stedolan.github.io/jq/
