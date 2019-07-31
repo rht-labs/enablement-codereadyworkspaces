@@ -82,7 +82,7 @@
         "attributes": {},
         "type": "blank",
         "source": {
-          "location": "https://github.com/eformat/do500-blank-repo.git",
+          "location": "https://github.com/rht-labs/enablement-blank-repo.git",
           "type": "git",
           "parameters": {}
         },
@@ -100,7 +100,7 @@
     },
     "commands": [
       {
-        "commandLine": "cd /projects && git clone https://github.com/springdo/todolist.git",
+        "commandLine": "cd /projects && git clone https://github.com/rht-labs/todolist.git",
         "name": "init-todolist",
         "type": "custom",
         "attributes": {}
