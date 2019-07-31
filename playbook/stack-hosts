@@ -1,0 +1,10 @@
+stack ansible_connection=local
+
+[npm-ansible-mongo]
+stack
+
+[npm-ansible-mongo:vars]
+cr_host_url="https://codeready-do500-workspaces.apps.boston-bcf4.gpte.rht-labs.com"
+cr_sso_url="https://keycloak-do500-workspaces.apps.boston-bcf4.gpte.rht-labs.com/auth/realms/codeready/protocol/openid-connect/token"
+cr_user="admin"
+cr_password="admin"
