@@ -26,6 +26,10 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 RUN echo "source scl_source enable rh-python36" >> /etc/bashrc
 RUN echo "git config --global http.sslVerify false" >> /etc/bashrc
 
+# Fixup helpers
+COPY fix-api-url.sh /usr/local/bin
+RUN echo "source /usr/local/bin/fix-api-url.sh" >> /etc/bashrc
+
 # ENV vars for stuff
 ENV MAVEN_HOME=/projects \
     MAVEN_CONFIG=${MAVEN_HOME}/.m2 \
