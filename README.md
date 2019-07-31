@@ -29,3 +29,7 @@ Run the playbook
 ```
 ansible-playbook -i stack-hosts stack.yml
 ```
+
+## Use the factory
+
+Use the Code Ready Workspace factory link provided after running the playbook to launch your workspace in OpenShift

@@ -4,5 +4,5 @@
 - hosts: stack
 
   roles:
-    - npm-ansible-mongo
+    - crw-install
 
