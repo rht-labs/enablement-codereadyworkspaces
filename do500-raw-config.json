@@ -4,11 +4,17 @@
   "workspaceConfig": {
     "commands": [
       {
-        "commandLine": "cd /projects && git clone https://github.com/springdo/todolist.git",
+        "commandLine": "cd /projects && git clone https://github.com/rht-labs/todolist.git",
         "name": "init-todolist",
         "type": "custom",
         "attributes": {}
-      }            
+      },
+      {
+        "commandLine": "cd /projects && git clone https://github.com/rht-labs/enablement-ci-cd.git",
+        "name": "init-ci-cd",
+        "type": "custom",
+        "attributes": {}
+      }                  
     ],
     "defaultEnv": "default",
     "environments": {
