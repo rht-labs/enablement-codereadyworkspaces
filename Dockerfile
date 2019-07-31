@@ -9,6 +9,7 @@ USER root
 # Extra repos not part of ubi
 COPY mongodb-org-3.6.repo /etc/yum.repos.d/
 COPY google-chrome.repo /etc/yum.repos.d/
+# rhel7.repo should go away when the base stack image properly supports RHEL repos when built on a subscribed node
 COPY rhel7.repo /etc/yum.repos.d/
 
 # Install
