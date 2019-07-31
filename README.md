@@ -1,0 +1,1 @@
+# codeready-workspace-stack
