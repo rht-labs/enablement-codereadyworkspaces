@@ -60,7 +60,10 @@
             "volumes": {
               "projects": {
                 "path": "/projects"
-              }
+              },
+              "mongo": {
+                "path": "/projects/mongo"
+              }              
             },
             "installers": [],
             "env": {}
@@ -94,8 +97,15 @@
     "attributes": {
       "editor": "org.eclipse.che.editor.theia:next",
       "plugins": "che-machine-exec-plugin:0.0.1,ms-vscode.node-debug2:1.31.6,redhat.vscode-yaml:0.4.0,redhat.vscode-openshift-connector:0.0.19"
-    },        
-    "commands": [],
+    },
+    "commands": [
+      {
+        "commandLine": "cd /projects && git clone https://github.com/springdo/todolist.git",
+        "name": "init-todolist",
+        "type": "custom",
+        "attributes": {}
+      }      
+    ],
     "links": []
   },
   "components": [
@@ -115,7 +125,7 @@
       "version": "---",
       "name": "Mongo"
     }
-  ],  
+  ],
   "creator": {
     "name": "admin",
     "email": "admin@admin.com",
