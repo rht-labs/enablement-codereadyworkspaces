@@ -2,7 +2,14 @@
   "creator": "a4310588-1d17-4f2d-9b5e-d2119d4f2291",
   "tags": [],
   "workspaceConfig": {
-    "commands": [],
+    "commands": [
+      {
+        "commandLine": "cd /projects && git clone https://github.com/springdo/todolist.git",
+        "name": "init-todolist",
+        "type": "custom",
+        "attributes": {}
+      }            
+    ],
     "defaultEnv": "default",
     "environments": {
       "default": {
@@ -62,7 +69,10 @@
             "volumes": {
               "projects": {
                 "path": "/projects"
-              }
+              },
+              "mongo": {
+                "path": "/projects/mongo"
+              }              
             },
             "installers": [],
             "env": {},
