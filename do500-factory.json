@@ -104,6 +104,12 @@
         "name": "init-todolist",
         "type": "custom",
         "attributes": {}
+      },
+      {
+        "commandLine": "cd /projects && git clone https://github.com/rht-labs/enablement-ci-cd.git",
+        "name": "init-ci-cd",
+        "type": "custom",
+        "attributes": {}
       }      
     ],
     "links": []
