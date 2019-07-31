@@ -4,7 +4,7 @@ stack ansible_connection=local
 stack
 
 [crw-install:vars]
-cr_host_url="https://codeready-do500-workspaces.apps.boston-bcf4.gpte.rht-labs.com"
-cr_sso_url="https://keycloak-do500-workspaces.apps.boston-bcf4.gpte.rht-labs.com/auth/realms/codeready/protocol/openid-connect/token"
+cr_host_url="https://codeready-workspaces.apps.cluster.rht-labs.com"
+cr_sso_url="https://keycloak-workspaces.apps.cluster.rht-labs.com/auth/realms/codeready/protocol/openid-connect/token"
 cr_user="admin"
 cr_password="admin"
