@@ -27,6 +27,10 @@ RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 RUN echo "source scl_source enable rh-python36" >> /etc/bashrc
 RUN echo "git config --global http.sslVerify false" >> /etc/bashrc
 RUN echo "git config --global http.sslVerify false" >> /etc/zshrc
+RUN echo "git config --global user.name 'Derek Dinosaur'" >> /etc/bashrc
+RUN echo "git config --global user.name 'Derek Dinosaur'" >> /etc/zshrc
+RUN echo "git config --global user.email 'derek@dinosaur.com'" >> /etc/bashrc
+RUN echo "git config --global user.email 'derek@dinosaur.com'" >> /etc/zshrc
 
 # Fixup helpers
 COPY fix-api-url.sh /usr/local/bin
