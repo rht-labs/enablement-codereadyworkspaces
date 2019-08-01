@@ -44,6 +44,10 @@ This custom stack is intended for use in the DO500 course offered by Red Hat Tra
 
 The tech stack and the [Dockerfile](Dockerfile) used to build it is included. The stack includes RHEL7 UBI, NPM, Ansible, Mongo DB and the OC client.
 
+<p class="tip">
+<b>NOTE</b> - The rhel7.repo file needs to be edited to point to a valid repository when building.
+</p>
+
 ## Install the Code Ready Workspaces stack and factory
 
 This requires a running Code Ready Workspaces install in OpenShift.
