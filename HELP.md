@@ -3,7 +3,7 @@
 Temporary help guide whilst we settle in CRW to enablement.
 
 ## Common Errors
-> _Provide some guidance for current common issues encountered with CRW and Enablment_
+> _Provide some guidance for current common issues encountered with CRW and Enablement_
 ____
 
 ### Error Starting Workspace
@@ -28,7 +28,7 @@ ____
 
 ### I Have Lost the Magic Factory Link!
 
-Users are badgering you for the magic link to create the cloud IDE and the SRE is on a coffee break. From `Excercise.1`
+Users are asking you for the magic link to create the cloud IDE and the SRE is on a coffee break. From `Excercise.1`
 
 ```
 https://codeready-workspaces.apps.<DOMAIN_FOR_YOUR_CLASS>/dashboard/#/load-factory?name=DO500%20Template&user=admin
@@ -38,7 +38,7 @@ https://codeready-workspaces.apps.<DOMAIN_FOR_YOUR_CLASS>/dashboard/#/load-facto
 </p>
 
 <p class="tip">
-<b>FIX</b> - Not fatal, use the force. The `factory` is only available to the `admin` user in CRW - hende the `&user=admin` bit on the end of the link.
+<b>FIX</b> - Not fatal, use the force. The `factory` is only available to the `admin` user in CRW - hence the `&user=admin` bit on the end of the link (dont change this !).
 
 - Login to dashboard URL (https://codeready-workspaces.apps.<DOMAIN_FOR_YOUR_CLASS>/dashboard) using the admin user (in keycloak/SSO) which is deployed to the CRW namespace
 - Browse to `Factories > DO500 Template`
