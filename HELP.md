@@ -1,6 +1,10 @@
 # 🆘 CodeReady Workspaces for Enablement 🆘 HELP FOR THE NEEDY 🆘
 
-Temporary help guide whilst we settle in CRW to enablement.
+Temporary help guide whilst we settle in CRW to enablement. 
+
+Product Documentation
+
+- https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.2/html-single/administration_guide/index
 
 ## Common Errors
 > _Provide some guidance for current common issues encountered with CRW and Enablement_
