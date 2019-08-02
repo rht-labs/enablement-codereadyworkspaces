@@ -38,7 +38,7 @@ https://codeready-workspaces.apps.<DOMAIN_FOR_YOUR_CLASS>/dashboard/#/load-facto
 <p class="tip">
 <b>FIX</b> - Not fatal, use the force. The `factory` is only available to the `admin` user in CRW - hende the `&user=admin` bit on the end of the link.
 
-- Login to dashboard URL (https://codeready-workspaces.apps.<DOMAIN_FOR_YOUR_CLASS>/dashboard) using admin/admin user (SSO) which is deployed to the CRW namespace
+- Login to dashboard URL (https://codeready-workspaces.apps.<DOMAIN_FOR_YOUR_CLASS>/dashboard) using the admin user (in keycloak/SSO) which is deployed to the CRW namespace
 - Browse to `Factories > DO500 Template`
 </p>
 
@@ -65,6 +65,6 @@ Longer term we should limit these - https://github.com/rht-labs/enablement-coder
 
 ____
 
-### Who do i call in emergency?
+### Who do i call in an emergency?
 
-- 📴 mak 📴 mak 📴 mak 📴
+- 📴 a.team 📴 b.mak 📴
