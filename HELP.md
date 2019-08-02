@@ -1,7 +1,9 @@
-# 🆘 CodeReady Workspaces DO500 🆘 HELP FOR THE NEEDY 🆘
+# 🆘 CodeReady Workspaces for Enablment 🆘 HELP FOR THE NEEDY 🆘
+
+Temporary help guide whilst we settle in CRW to enablement.
 
 ## Common Errors
-> _Provide some guidance for current common issues encountered with CRW and DO500_
+> _Provide some guidance for current common issues encountered with CRW and Enablment_
 ____
 
 ### Error Starting Workspace
