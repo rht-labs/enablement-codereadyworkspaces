@@ -100,7 +100,7 @@
     },
     "commands": [
       {
-        "commandLine": "cd /projects && git clone https://github.com/rht-labs/todolist.git",
+        "commandLine": "cd /projects && git clone https://github.com/rht-labs/todolist.git && cd todolist && git checkout -b develop",
         "name": "init-todolist",
         "type": "custom",
         "attributes": {}
