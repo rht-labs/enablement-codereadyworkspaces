@@ -1,4 +1,4 @@
-# 🆘 CodeReady Workspaces for Enablment 🆘 HELP FOR THE NEEDY 🆘
+# 🆘 CodeReady Workspaces for Enablement 🆘 HELP FOR THE NEEDY 🆘
 
 Temporary help guide whilst we settle in CRW to enablement.
 
