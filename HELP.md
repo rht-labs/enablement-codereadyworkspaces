@@ -71,6 +71,19 @@ Longer term we should limit these - https://github.com/rht-labs/enablement-coder
 
 ____
 
+### Stuck namespaces that are always 'Terminating' ?
+
+Seems that the Che CR holds onto storage resources (i think).. if you want to delete a projects that is being stubourn
+
+Good Luck 🤠🤠🤠
+
+```
+APIURL=https://master.boston1-6c20.gpte.rht-labs.com:443
+for i in $( oc get ns | grep Terminating | awk '{print $1}'); do echo $i; oc get ns $i -o json| jq "del(.spec.finalizers[0])"> "$i.json"; curl -k -H "Authorization: Bearer $(oc whoami -t)" -H "Content-Type: application/json" -X PUT --data-binary @"$i.json" "$APIURL/api/v1/namespaces/$i/finalize"; done
+for i in $(oc get pvc | grep Terminating| awk '{print $1}'); do oc patch pvc $i --type='json' -p='[{"op": "replace", "path": "/metadata/finalizers", "value":[]}]'; done
+for i in $(oc get pv | grep Released| awk '{print $1}'); do oc patch pv $i --type='json' -p='[{"op": "replace", "path": "/metadata/finalizers", "value":[]}]'; done
+```
+
 ### Who do i call in an emergency?
 
 - 📴 a.team 📴 b.mak 📴
