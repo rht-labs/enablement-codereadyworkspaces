@@ -73,3 +73,40 @@ Browse to the Code Ready Workspace factory URL link provided after running the a
 ```
   "href": "https://codeready-workspaces.apps.cluster.example.com/f?name=DO500%20Template&user=admin"
 ```
+
+## Create a plugin registry (Workaround)
+
+We build our own che plugin registry prior to commit for Che7 & CRW 1.2 (which is a breaking change for now and will be removed in future versions).
+
+```
+git clone https://github.com/eclipse/che-plugin-registry.git
+git checkout 92c7499aeaa8030bf7f3e0dcab660007de028d00
+
+./build.sh
+
+docker tag quay.io/eclipse/che-plugin-registry:nightly quay.io/rht-labs/che-plugin-registry
+docker push quay.io/rht-labs/che-plugin-registry
+
+oc new-app --name=che-plugin-registry -f openshift/che-plugin-registry.yml \
+           -p IMAGE="quay.io/rht-labs/che-plugin-registry" \
+           -p IMAGE_TAG="latest" \
+           -p PULL_POLICY="IfNotPresent"
+```
+
+Then update the ConfigMap
+
+```
+oc edit configmap custom -n che
+
+  CHE_WORKSPACE_PLUGIN__REGISTRY__URL: http://che-plugin-registry-crw.apps.cluster.example.com
+
+oc scale deployment/codeready --replicas=0
+oc scale deployment/codeready --replicas=1
+```
+
+If using OpenShift 4.X also add PVC wait workaround to ConfigMap
+
+```
+oc edit configmap custom -n che
+   CHE_INFRA_KUBERNETES_PVC_WAIT__BOUND: 'false'
+```
