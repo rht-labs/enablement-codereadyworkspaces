@@ -48,7 +48,7 @@ ENV MAVEN_HOME=/projects \
 RUN curl -o /usr/local/bin/jq -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && \
   chmod +x /usr/local/bin/jq
 
-# Add Let's Encrypt CA to OS trsuted store
+# Add Let's Encrypt CA to OS trusted store
 RUN curl -o /etc/pki/ca-trust/source/anchors/lets-encrypt-x3-cross-signed.crt https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt && \
     update-ca-trust extract
 
