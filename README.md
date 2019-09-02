@@ -63,7 +63,7 @@ cr_password="admin"
 
 Run the playbook
 ```
-ansible-playbook -i stack-hosts stack.yml
+ansible-playbook -i playbook/stack-hosts playbook/stack.yml
 ```
 
 ## Use the factory to create a workspace
