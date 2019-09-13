@@ -37,10 +37,10 @@ Check the local `README.adoc` in the unpacked directory for more details - inclu
 
 ## Custom Multi-Container Stack
 
-This custom stack is intended for use in the DO500 course offered by Red Hat Training. The materials are available on GitHub. Since the technology is constantly changing this stack should fall out of date quickly.
+This custom stack is intended for use in the DO500 course offered by Red Hat Training. The materials are available on GitHub. Since the technology is constantly changing this stack may fall out of date quickly.
 
 - A shell script is provided to add the [raw config file](do500-raw-config.json). Modify the environment variables.
-- An ansible playbook is also provided in the same manner as the shell script if your more into that.
+- An ansible playbook is also provided in the same manner as the shell script if you are more into that.
 
 The tech stack and the [Dockerfile](Dockerfile) used to build it is included. The stack includes RHEL7 UBI, NPM, Ansible, Mongo DB and the OC client.
 
@@ -52,7 +52,7 @@ The tech stack and the [Dockerfile](Dockerfile) used to build it is included. Th
 
 This requires a running Code Ready Workspaces install in OpenShift.
 
-Update the [ansible hosts file](playbook/stack-hosts) with your SSO/Keycloak admin credentials and URL
+Update the [ansible inventory hosts file](playbook/stack-hosts) with your SSO/Keycloak admin credentials and URLs matching your OpenShift Container Platform cluster:
 
 ```
 cr_host_url="https://codeready-workspaces.apps.cluster.example.com"
@@ -68,7 +68,7 @@ ansible-playbook -i playbook/stack-hosts playbook/stack.yml
 
 ## Use the factory to create a workspace
 
-Browse to the Code Ready Workspace factory URL link provided after running the ansible playbook to launch your workspace in OpenShift
+Browse to the Code Ready Workspace factory URL link provided after running the ansible playbook to launch your workspace in OpenShift:
 
 ```
   "href": "https://codeready-workspaces.apps.cluster.example.com/f?name=DO500%20Template&user=admin"
