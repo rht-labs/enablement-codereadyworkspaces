@@ -79,7 +79,7 @@ Browse to the Code Ready Workspace factory URL link provided after running the a
 Edit the `custom` configmap that is created within your do500-workspaces project and add
 
 ```
-oc edit cm -n do500-workspaces custom
+oc edit cm custom -n do500-workspaces
 
   CHE_LIMITS_USER_WORKSPACES_COUNT: "2"
   CHE_LIMITS_USER_WORKSPACES_RUN_COUNT: "1"
