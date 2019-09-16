@@ -74,20 +74,25 @@ Browse to the Code Ready Workspace factory URL link provided after running the a
   "href": "https://codeready-workspaces.apps.cluster.example.com/f?name=DO500%20Template&user=admin"
 ```
 
+## Limit the number of workspaces able to be created by a user
+
+Edit the `custom` configmap that is created within your do500-workspaces project and add
+
+```
+oc edit cm -n do500-workspaces custom
+
+  CHE_LIMITS_USER_WORKSPACES_COUNT: "2"
+  CHE_LIMITS_USER_WORKSPACES_RUN_COUNT: "1"
+```
+
+This will allow a user to create up to 2 workspaces at one time, while only having the ability to run one at a time.
+
 ## Create a plugin registry (Workaround)
 
 We build our own che plugin registry prior to commit for Che7 & CRW 1.2 (which is a breaking change for now and will be removed in future versions).
 
 ```
-git clone https://github.com/eclipse/che-plugin-registry.git
-git checkout 92c7499aeaa8030bf7f3e0dcab660007de028d00
-
-./build.sh
-
-docker tag quay.io/eclipse/che-plugin-registry:nightly quay.io/rht-labs/che-plugin-registry
-docker push quay.io/rht-labs/che-plugin-registry
-
-oc new-app --name=che-plugin-registry -f openshift/che-plugin-registry.yml \
+oc new-app --name=che-plugin-registry -f https://raw.githubusercontent.com/eclipse/che-plugin-registry/92c7499aeaa8030bf7f3e0dcab660007de028d00/openshift/che-plugin-registry.yml \
            -p IMAGE="quay.io/rht-labs/che-plugin-registry" \
            -p IMAGE_TAG="latest" \
            -p PULL_POLICY="IfNotPresent"
@@ -96,7 +101,7 @@ oc new-app --name=che-plugin-registry -f openshift/che-plugin-registry.yml \
 Then update the ConfigMap
 
 ```
-oc edit configmap custom -n che
+oc edit configmap custom -n do500-workspaces
 
   CHE_WORKSPACE_PLUGIN__REGISTRY__URL: http://che-plugin-registry-crw.apps.cluster.example.com
 
