@@ -103,7 +103,7 @@ Then update the ConfigMap
 ```
 oc edit configmap custom -n do500-workspaces
 
-  CHE_WORKSPACE_PLUGIN__REGISTRY__URL: http://che-plugin-registry-crw.apps.cluster.example.com
+  CHE_WORKSPACE_PLUGIN__REGISTRY__URL: http://che-plugin-registry.apps.cluster.example.com
 
 oc scale deployment/codeready --replicas=0
 oc scale deployment/codeready --replicas=1
