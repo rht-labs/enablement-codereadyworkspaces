@@ -1,0 +1,4 @@
+*.log
+tests_*
+node_modules
+*.retry
