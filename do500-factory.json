@@ -96,7 +96,7 @@
     "name": "do500",
     "attributes": {
       "editor": "org.eclipse.che.editor.theia:1.0.0",
-      "plugins": "che-machine-exec-plugin:0.0.1"
+      "plugins": "che-machine-exec-plugin:0.0.1,ms-vscode.node-debug2:1.31.6,redhat.vscode-yaml:0.4.0"
     },
     "commands": [
       {
