@@ -74,6 +74,18 @@ Browse to the Code Ready Workspace factory URL link provided after running the a
   "href": "https://codeready-workspaces.apps.cluster.example.com/f?name=DO500%20Template&user=admin"
 ```
 
+## Use the nightwatch tests to pre-load the factory
+
+Speed up the time in the classroom by pre-running the workspace generation. Ammend the `url` and the `lab` number in the `create-ws.js` file.
+
+Run the test file:
+
+```
+npm i
+npx nightwatch create-ws.js
+```
+
+
 ## Limit the number of workspaces able to be created by a user
 
 Edit the `custom` configmap that is created within your do500-workspaces project and add
