@@ -76,13 +76,13 @@ Browse to the Code Ready Workspace factory URL link provided after running the a
 
 ## Use the nightwatch tests to pre-load the factory
 
-Speed up the time in the classroom by pre-running the workspace generation. Ammend the `url` and the `lab` number in the `create-ws.js` file.
+Speed up the time in the classroom by pre-running the workspace generation. Amend the `url` and the `lab` number in the `create-ws.js` file.
 
-Run the test file:
+Run the test file in the following loop to pre-head 14 CRW:
 
 ```
 npm i
-npx nightwatch create-ws.js
+for i in {01..14};do export LAB_NUMBER="lab$i"; echo "I is $LAB_NUMBER"; npx nightwatch create-ws.js; done
 ```
 
 
