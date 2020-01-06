@@ -1,6 +1,6 @@
 username = process.env.LAB_NUMBER || "lab01"
 password = username
-    
+
 module.exports = {
     'Fire Up each CRW': function (browser) {
         browser

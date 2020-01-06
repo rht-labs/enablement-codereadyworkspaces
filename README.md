@@ -80,9 +80,9 @@ https://codeready-workspaces.apps.cluster.example.com/f?url=https://raw.githubus
 
 ## Use the nightwatch tests to pre-create the workspaces
 
-Speed up the time in the classroom by pre-running the workspace generation. Ammend the `url` and the `lab` number in the `create-ws.js` file.
+Speed up the time in the classroom by pre-running the workspace generation. Amend the `url` and the `lab` number in the `create-ws.js` file.
 
-Run the test file:
+Run the test file in the following loop to pre-head 14 CRW:
 
 ```
 npm i
