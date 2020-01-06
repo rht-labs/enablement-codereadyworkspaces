@@ -7,7 +7,7 @@ projects:
     source:
       type: git
       location: 'https://github.com/rht-labs/todolist.git'
-      branch: develop
+      branch: master
   - name: ci-cd
     source:
       type: git
