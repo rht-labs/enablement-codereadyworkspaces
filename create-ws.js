@@ -13,6 +13,9 @@ module.exports = {
             .setValue('input[name="username"]', username)
             .setValue('input[name="password"]', password)
             .click('button[type="submit"]')
+            // Approve perms for OCP land
+            .waitForElementVisible('input[name="approve"]', 6000)
+            .click('input[name="approve"]')
             // Fill in email for CRW nonsense
             .waitForElementVisible('input[name="email"]', 6000)
             .setValue('input[name="email"]', `${username}@redhat.com`)
