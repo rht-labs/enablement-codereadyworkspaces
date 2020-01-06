@@ -4,7 +4,7 @@ password = username
 module.exports = {
     'Fire Up each CRW': function (browser) {
         browser
-            .url('https://codeready-crw.apps.foo.sandbox925.opentlc.com/f?url=https://raw.githubusercontent.com/eformat/enablement-codereadyworkspaces/2.0/do500-devfile.yaml')
+            .url('https://codeready-crw.apps.foo.sandbox925.opentlc.com/f?url=https://raw.githubusercontent.com/rht-labs/enablement-codereadyworkspaces/master/do500-devfile.yaml')
             .waitForElementVisible('body')
             .useXpath()
             .useCss()
