@@ -27,12 +27,6 @@ components:
   - alias: vscode-yaml
     type: chePlugin
     id: redhat/vscode-yaml/latest
-  - alias: vscode-openshift-connector
-    type: chePlugin
-    id: redhat/vscode-openshift-connector/latest
-  - alias: vscode-xml
-    type: chePlugin
-    id: redhat/vscode-xml/latest
   - type: dockerimage
     alias: node-rhel7-ansible
     image: quay.io/rht-labs/stacks-node-rhel7-ansible:latest
