@@ -25,16 +25,37 @@ oc apply -f deploy/create-crw.yaml
 oc apply -f deploy/org_v1_che_cr.yaml
 ```
 
+<p class="tip">
+<b>NOTE</b> - Use file - org_v1_che_cr_insecure.yaml - if you have self signed router certificates.
+<p> You will also need to masually accept SSL self signed certs in your browser for all routes in your workspace namespace else you will not be able to open a terminal or workspace without error.</p>
+</p>
+
 ### OpenShift Container Platform v3
 
-`TBD`
-
+Install guide
 - https://www.eclipse.org/che/docs/che-7/installing-che-on-openshift-3-using-the-operator
 
+Download the `crwctl` helper from here and puth on PATH:
+- https://developers.redhat.com/products/codeready-workspaces/download
+- https://github.com/redhat-developer/codeready-workspaces-chectl/releases
+
+```
+wget https://github.com/redhat-developer/codeready-workspaces-chectl/releases/download/20191122111826/crwctl-linux-x64.tar.gz
+tar xzvf crwctl-linux-x64.tar.gz
+export PATH=$PATH:<path to crwctl/bin>
+```
+
+Create Project and Deploy Operator and Instance using crwctl:
 ```
 oc new-project crw --display-name="CRW" --description='CRW'
-crwctl server:start --platform=openshift --installer=operator --domain=<app domain> --tls --multiuser --os-oauth --chenamespace crw
+crwctl server:start --platform=openshift --installer=operator --che-operator-cr-yaml=org_v1_che_cr.yaml --chenamespace crw --k8spodreadytimeout=600000 --k8spodwaittimeout=600000
 ```
+
+<p class="tip">
+<b>NOTE</b> - crwctl is finnicky about the size of your ~/.kube/config. If you recieve an error like:
+<p>Error: contexts[518].context.cluster is missing</p>
+<p> move your kube config aside, relogin to cluster and try install command again
+</p>
 
 ## Custom Multi-Container Stack
 
