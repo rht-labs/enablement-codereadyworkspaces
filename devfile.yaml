@@ -16,7 +16,7 @@ projects:
 components:
   - type: cheEditor
     alias: theia-editor
-    id: eclipse/che-theia/next
+    id: eclipse/che-theia/latest
     memoryLimit: 2Gi
   - alias: exec-plugin
     type: chePlugin
