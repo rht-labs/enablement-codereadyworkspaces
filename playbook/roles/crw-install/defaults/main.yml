@@ -1,4 +1,0 @@
-cr_host_url: "https://codeready.rht-labs.com"
-cr_sso_url: "https://keycloak.rht-labs.com/auth/realms/codeready/protocol/openid-connect/token"
-cr_user: ""
-cr_password: ""

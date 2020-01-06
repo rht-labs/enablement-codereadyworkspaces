@@ -1,8 +1,0 @@
----
-# This playbook deploys the jenkins pipeline for java eap projects
-
-- hosts: stack
-
-  roles:
-    - crw-install
-
