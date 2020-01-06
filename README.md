@@ -27,7 +27,14 @@ oc apply -f deploy/org_v1_che_cr.yaml
 
 ### OpenShift Container Platform v3
 
-TBD
+`TBD`
+
+- https://www.eclipse.org/che/docs/che-7/installing-che-on-openshift-3-using-the-operator
+
+```
+oc new-project crw --display-name="CRW" --description='CRW'
+crwctl server:start --platform=openshift --installer=operator --domain=<app domain> --tls --multiuser --os-oauth --chenamespace crw
+```
 
 ## Custom Multi-Container Stack
 
