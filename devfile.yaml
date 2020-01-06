@@ -14,6 +14,13 @@ projects:
       location: 'https://github.com/rht-labs/enablement-ci-cd.git'
       branch: master
 components:
+  - type: cheEditor
+    alias: theia-editor
+    id: eclipse/che-theia/next
+    memoryLimit: 2Gi
+    env:
+    - name: HOME
+      value: $(CHE_PROJECTS_ROOT)
   - alias: exec-plugin
     type: chePlugin
     id: eclipse/che-machine-exec-plugin/latest
@@ -30,6 +37,7 @@ components:
     type: chePlugin
     id: redhat/vscode-xml/latest
   - type: dockerimage
+    alias: node-rhel7-ansible
     image: quay.io/rht-labs/stacks-node-rhel7-ansible:latest
     memoryLimit: 2Gi
     mountSources: true
@@ -92,10 +100,4 @@ components:
           discoverable: "true"
           public: "false"          
           protocol: http          
-  - type: cheEditor
-    alias: theia-editor
-    id: eclipse/che-theia/next
-    memoryLimit: 2Gi
-    env:
-    - name: HOME
-      value: $(CHE_PROJECTS_ROOT)
+
