@@ -1,0 +1,22 @@
+{
+  "name": "enablement-codereadyworkspaces",
+  "version": "1.0.0",
+  "description": "## Attributions",
+  "main": "create-ws.js",
+  "dependencies": {
+    "chromedriver": "^79.0.0",
+    "nightwatch": "^1.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rht-labs/enablement-codereadyworkspaces.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rht-labs/enablement-codereadyworkspaces/issues"
+  },
+  "homepage": "https://github.com/rht-labs/enablement-codereadyworkspaces#readme"
+}
