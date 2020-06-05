@@ -61,9 +61,6 @@ crwctl server:start --platform=openshift --installer=operator --che-operator-cr-
 
 This custom stack is intended for use in the DO500 course offered by Red Hat Training. The materials are available on GitHub. Since the technology is constantly changing this stack may fall out of date quickly.
 
-- A shell script is provided to add the [raw config file](do500-raw-config.json). Modify the environment variables.
-- An ansible playbook is also provided in the same manner as the shell script if you are more into that.
-
 The tech stack and the [Dockerfile](Dockerfile) used to build it is included. The stack includes RHEL7 UBI, NPM, Ansible, Mongo DB and the OC client.
 
 <p class="tip">
